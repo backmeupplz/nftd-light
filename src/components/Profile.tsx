@@ -1,6 +1,7 @@
 import { BodyText } from 'components/Text'
 import { proxy, useSnapshot } from 'valtio'
 import { useEffect } from 'preact/hooks'
+import Avatar from 'components/Avatar'
 import SuspenseWithError from 'components/SuspenseWithError'
 import UserProfile from 'models/UserProfile'
 import classnames, {
@@ -18,7 +19,8 @@ const state = proxy<{
 
 function ProfileSuspended() {
   const { user } = useSnapshot(state)
-  return <BodyText>{JSON.stringify(user)}</BodyText>
+  if (!user) return null
+  return <Avatar url={user?.avatar} />
 }
 
 const container = classnames(
