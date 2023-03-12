@@ -11,9 +11,6 @@ import classnames, {
   flexDirection,
   gap,
   justifyContent,
-  maxWidth,
-  minWidth,
-  width,
 } from 'classnames/tailwind'
 import getUserProfile from 'helpers/getUserProfile'
 
