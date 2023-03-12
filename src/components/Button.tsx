@@ -14,7 +14,7 @@ const buttonContainer = classnames(
   alignItems('items-center'),
   borderWidth('border'),
   borderColor('border-white'),
-  padding('py-8')
+  padding('py-8', 'lg:px-40')
 )
 export default function ({ title, url }: { title: string; url: string }) {
   return (

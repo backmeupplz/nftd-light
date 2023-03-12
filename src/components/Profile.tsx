@@ -11,6 +11,9 @@ import classnames, {
   flexDirection,
   gap,
   justifyContent,
+  maxWidth,
+  minWidth,
+  width,
 } from 'classnames/tailwind'
 import getUserProfile from 'helpers/getUserProfile'
 
@@ -37,7 +40,7 @@ const buttonsCol = classnames(
   flexDirection('flex-col'),
   justifyContent('justify-center'),
   alignItems('items-stretch'),
-  gap('gap-2')
+  gap('gap-4')
 )
 function ProfileSuspended() {
   const { user } = useSnapshot(state)
