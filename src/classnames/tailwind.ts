@@ -7262,7 +7262,7 @@ export type TTextDecorationStyle =
   | 'decoration-dashed'
   | 'decoration-wavy'
 
-export type TFontFamily = 'font-sans' | 'font-serif' | 'font-mono'
+export type TFontFamily = 'font-sans' | 'font-serif' | 'font-mono' | 'font-ens'
 
 export type TFontSize =
   | 'text-xs'
@@ -7278,6 +7278,7 @@ export type TFontSize =
   | 'text-7xl'
   | 'text-8xl'
   | 'text-9xl'
+  | 'text-xxs'
 
 export type TFontWeight =
   | 'font-thin'
