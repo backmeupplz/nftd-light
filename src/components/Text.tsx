@@ -19,7 +19,7 @@ export function EnsText({ children }: ChildrenProp) {
 
 const bodyText = classnames(
   fontFamily('font-sans'),
-  fontWeight('font-light'),
+  fontWeight('font-normal'),
   fontSize('text-base'),
   textColor('text-white')
 )

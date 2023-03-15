@@ -6,4 +6,11 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: repeating-linear-gradient(
+    to right,
+    rgba(38, 38, 38, 0.5),
+    rgba(38, 38, 38, 0.5) 1px,
+    #000 1px 100px
+  );
 }
