@@ -23,6 +23,7 @@
     ]
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.16",
     "@vitejs/plugin-react": "^3.1.0",
     "daisyui": "^2.51.3",
     "preact": "^10.13.0",

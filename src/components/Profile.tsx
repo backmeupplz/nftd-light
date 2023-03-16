@@ -50,8 +50,13 @@ function ProfileSuspended() {
         <BodyText>{user.bio}</BodyText>
       </div>
       <div className={buttonsCol}>
-        {user.verified_links.map((link, i) => (
-          <Button key={i} title={link.label} url={link.url} />
+        {user.all_links.map((link, i) => (
+          <Button
+            key={i}
+            title={link.label}
+            url={link.url}
+            verified={link.verified === true}
+          />
         ))}
       </div>
     </div>

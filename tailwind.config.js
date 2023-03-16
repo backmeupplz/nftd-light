@@ -11,6 +11,12 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         ens: ['Exo', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        gradient: {
+          start: '#aafff8',
+          end: '#e1b1fc',
+        },
+      },
     },
   },
   plugins: [require('daisyui')],

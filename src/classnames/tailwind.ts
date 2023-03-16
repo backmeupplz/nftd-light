@@ -276,6 +276,8 @@ export type TBackgroundColor =
   | 'bg-rose-700'
   | 'bg-rose-800'
   | 'bg-rose-900'
+  | 'bg-gradient-start'
+  | 'bg-gradient-end'
 
 export type TBackgroundPosition =
   | 'bg-bottom'
@@ -977,6 +979,12 @@ export type TGradientColorStops =
   | 'from-rose-900'
   | 'via-rose-900'
   | 'to-rose-900'
+  | 'from-gradient-start'
+  | 'via-gradient-start'
+  | 'to-gradient-start'
+  | 'from-gradient-end'
+  | 'via-gradient-end'
+  | 'to-gradient-end'
 
 export type TBackgrounds =
   | TBackgroundAttachment
@@ -2579,6 +2587,20 @@ export type TBorderColor =
   | 'border-l-rose-900'
   | 'border-x-rose-900'
   | 'border-y-rose-900'
+  | 'border-gradient-start'
+  | 'border-t-gradient-start'
+  | 'border-r-gradient-start'
+  | 'border-b-gradient-start'
+  | 'border-l-gradient-start'
+  | 'border-x-gradient-start'
+  | 'border-y-gradient-start'
+  | 'border-gradient-end'
+  | 'border-t-gradient-end'
+  | 'border-r-gradient-end'
+  | 'border-b-gradient-end'
+  | 'border-l-gradient-end'
+  | 'border-x-gradient-end'
+  | 'border-y-gradient-end'
 
 export type TBorderOpacity =
   | 'border-opacity-0'
@@ -3201,6 +3223,8 @@ export type TRingColor =
   | 'ring-rose-700'
   | 'ring-rose-800'
   | 'ring-rose-900'
+  | 'ring-gradient-start'
+  | 'ring-gradient-end'
 
 export type TRingWidth =
   | 'ring-0'
@@ -3455,6 +3479,8 @@ export type TRingOffsetColor =
   | 'ring-offset-rose-700'
   | 'ring-offset-rose-800'
   | 'ring-offset-rose-900'
+  | 'ring-offset-gradient-start'
+  | 'ring-offset-gradient-end'
 
 export type TRingOffsetWidth =
   | 'ring-offset-0'
@@ -3703,6 +3729,8 @@ export type TOutlineColor =
   | 'outline-rose-700'
   | 'outline-rose-800'
   | 'outline-rose-900'
+  | 'outline-gradient-start'
+  | 'outline-gradient-end'
 
 export type TBorders =
   | TBorderStyle
@@ -4002,6 +4030,8 @@ export type TBoxShadowColor =
   | 'shadow-rose-700'
   | 'shadow-rose-800'
   | 'shadow-rose-900'
+  | 'shadow-gradient-start'
+  | 'shadow-gradient-end'
 
 export type TOpacity =
   | 'opacity-0'
@@ -5546,6 +5576,8 @@ export type TCaretColor =
   | 'caret-rose-700'
   | 'caret-rose-800'
   | 'caret-rose-900'
+  | 'caret-gradient-start'
+  | 'caret-gradient-end'
 
 export type TWillChange =
   | 'will-change-auto'
@@ -5780,6 +5812,8 @@ export type TAccentColor =
   | 'accent-rose-800'
   | 'accent-rose-900'
   | 'accent-auto'
+  | 'accent-gradient-start'
+  | 'accent-gradient-end'
 
 export type TScrollPadding =
   | 'scroll-p-0'
@@ -7005,6 +7039,7 @@ export type TFill =
   | 'fill-fuchsia'
   | 'fill-pink'
   | 'fill-rose'
+  | 'fill-gradient'
 
 export type TStroke =
   | 'stroke-inherit'
@@ -7034,6 +7069,7 @@ export type TStroke =
   | 'stroke-fuchsia'
   | 'stroke-pink'
   | 'stroke-rose'
+  | 'stroke-gradient'
 
 export type TStrokeWidth = 'stroke-0' | 'stroke-1' | 'stroke-2'
 
@@ -7543,6 +7579,8 @@ export type TPlaceholderColor =
   | 'placeholder-rose-700'
   | 'placeholder-rose-800'
   | 'placeholder-rose-900'
+  | 'placeholder-gradient-start'
+  | 'placeholder-gradient-end'
 
 export type TPlaceholderOpacity =
   | 'placeholder-opacity-0'
@@ -7787,6 +7825,8 @@ export type TTextColor =
   | 'text-rose-700'
   | 'text-rose-800'
   | 'text-rose-900'
+  | 'text-gradient-start'
+  | 'text-gradient-end'
 
 export type TTextOpacity =
   | 'text-opacity-0'
@@ -8070,6 +8110,8 @@ export type TTextDecorationColor =
   | 'decoration-rose-700'
   | 'decoration-rose-800'
   | 'decoration-rose-900'
+  | 'decoration-gradient-start'
+  | 'decoration-gradient-end'
 
 export type TTextDecorationThickness =
   | 'decoration-0'

@@ -1,4 +1,6 @@
-import SocialProfile from 'models/SocialProfile'
+import AllLink from 'models/AllLink'
+import EnsData from 'models/EnsData'
+import PrimarySocial from 'models/PrimarySocial'
 import VerifiedLink from 'models/VerifiedLink'
 
 export default interface UserProfile {
@@ -7,7 +9,8 @@ export default interface UserProfile {
   displayName: string
   avatar: string
   bio: string
-  ens: string
-  primary_social: SocialProfile[]
+  ensData: EnsData[]
+  primary_social: PrimarySocial[]
   verified_links: VerifiedLink[]
+  all_links: AllLink[]
 }
