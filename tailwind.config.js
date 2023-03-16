@@ -16,6 +16,9 @@ module.exports = {
           start: '#aafff8',
           end: '#e1b1fc',
         },
+        ens: {
+          background: '#141414;',
+        },
       },
     },
   },

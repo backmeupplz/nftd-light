@@ -9,7 +9,7 @@ export default interface UserProfile {
   displayName: string
   avatar: string
   bio: string
-  ensData: EnsData[]
+  ensData?: EnsData[]
   primary_social: PrimarySocial[]
   verified_links: VerifiedLink[]
   all_links: AllLink[]

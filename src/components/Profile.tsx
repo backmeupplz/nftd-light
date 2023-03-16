@@ -1,8 +1,9 @@
-import { BodyText, EnsText } from 'components/Text'
+import { BodyText, DisplayText } from 'components/Text'
 import { proxy, useSnapshot } from 'valtio'
 import { useEffect } from 'preact/hooks'
 import Avatar from 'components/Avatar'
 import Button from 'components/Button'
+import EnsName from 'components/EnsName'
 import SuspenseWithError from 'components/SuspenseWithError'
 import UserProfile from 'models/UserProfile'
 import classnames, {
@@ -31,7 +32,14 @@ const bioCol = classnames(
   flexDirection('flex-col'),
   justifyContent('justify-center'),
   alignItems('items-start'),
-  gap('gap-2')
+  gap('gap-4')
+)
+const socialContainer = classnames(
+  display('flex'),
+  flexDirection('flex-row'),
+  gap('gap-2.5'),
+  justifyContent('justify-start'),
+  alignItems('items-center')
 )
 const buttonsCol = classnames(
   display('flex'),
@@ -48,7 +56,12 @@ function ProfileSuspended() {
     <div className={container}>
       <div className={bioCol}>
         <Avatar url={user.avatar} isOG={user.isOG} />
-        <EnsText>{user.displayName}</EnsText>
+        <DisplayText>{user.displayName}</DisplayText>
+        {user.ensData?.[0]?.name && (
+          <div className={socialContainer}>
+            <EnsName name={user.ensData[0].name} />
+          </div>
+        )}
         <BodyText>{user.bio}</BodyText>
       </div>
       <div className={buttonsCol}>

@@ -7,14 +7,14 @@ import {
 } from 'classnames/tailwind'
 import ChildrenProp from 'models/ChildrenProp'
 
-const ensText = classnames(
+const displayText = classnames(
   fontFamily('font-ens'),
   fontWeight('font-extrabold'),
   fontSize('text-2xl'),
   textColor('text-white')
 )
-export function EnsText({ children }: ChildrenProp) {
-  return <p className={ensText}>{children}</p>
+export function DisplayText({ children }: ChildrenProp) {
+  return <p className={displayText}>{children}</p>
 }
 
 const bodyText = classnames(
