@@ -5,6 +5,7 @@ import { useEffect } from 'preact/hooks'
 import Avatar from 'components/Avatar'
 import Button from 'components/Button'
 import EnsName from 'components/EnsName'
+import Helmet from 'preact-helmet'
 import SuspenseWithError from 'components/SuspenseWithError'
 import UserProfile from 'models/UserProfile'
 import classnames, {
@@ -59,6 +60,7 @@ function ProfileSuspended() {
   if (!user) return null
   return (
     <div className={container}>
+      <Helmet title={user.displayName} />
       <div className={bioCol}>
         <Avatar url={user.avatar} isOG={user.isOG} />
         <DisplayText>{user.displayName}</DisplayText>

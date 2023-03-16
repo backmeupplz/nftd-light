@@ -27,6 +27,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "daisyui": "^2.51.3",
     "preact": "^10.13.0",
+    "preact-helmet": "^4.0.0-alpha-3",
     "valtio": "^1.10.3",
     "wouter": "^2.10.0"
   },
