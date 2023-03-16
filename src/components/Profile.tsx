@@ -1,4 +1,5 @@
 import { BodyText, DisplayText } from 'components/Text'
+import { CheckBadgeIcon } from '@heroicons/react/24/outline'
 import { proxy, useSnapshot } from 'valtio'
 import { useEffect } from 'preact/hooks'
 import Avatar from 'components/Avatar'
@@ -8,10 +9,14 @@ import SuspenseWithError from 'components/SuspenseWithError'
 import UserProfile from 'models/UserProfile'
 import classnames, {
   alignItems,
+  animation,
   display,
   flexDirection,
   gap,
+  height,
   justifyContent,
+  margin,
+  textColor,
   width,
 } from 'classnames/tailwind'
 import getUserProfile from 'helpers/getUserProfile'
@@ -78,13 +83,20 @@ function ProfileSuspended() {
   )
 }
 
+const loader = classnames(
+  height('h-10'),
+  width('w-10'),
+  textColor('text-white'),
+  animation('animate-ping'),
+  margin('mx-auto')
+)
 export default function ({ username }: { username: string }) {
   useEffect(() => {
     state.user = getUserProfile(username)
   }, [username])
   return (
     <SuspenseWithError
-      fallback={<BodyText>Loading...</BodyText>}
+      fallback={<CheckBadgeIcon className={loader} />}
       username={username}
     >
       <ProfileSuspended />
