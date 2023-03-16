@@ -5,6 +5,7 @@ import { useEffect } from 'preact/hooks'
 import Avatar from 'components/Avatar'
 import Button from 'components/Button'
 import EnsName from 'components/EnsName'
+import FarcasterIcon from 'components/FarcasterIcon'
 import Helmet from 'preact-helmet'
 import SuspenseWithError from 'components/SuspenseWithError'
 import UserProfile from 'models/UserProfile'
@@ -66,6 +67,19 @@ function ProfileSuspended() {
         <DisplayText>{user.displayName}</DisplayText>
         {user.ensData?.[0]?.name && (
           <div className={socialContainer}>
+            {user.primary_social[0]?.subtype === 'farcaster' &&
+              user.primary_social[0]?.username && (
+                <button
+                  onClick={() => {
+                    window.open(
+                      `https://warpcast.com/${user.primary_social[0].username}`,
+                      '_blank'
+                    )
+                  }}
+                >
+                  <FarcasterIcon />
+                </button>
+              )}
             <EnsName name={user.ensData[0].name} />
           </div>
         )}
