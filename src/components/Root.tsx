@@ -1,6 +1,9 @@
 import {
   classnames,
   container,
+  display,
+  flexDirection,
+  justifyContent,
   margin,
   maxWidth,
   minHeight,
@@ -13,7 +16,10 @@ const root = classnames(
   margin('mx-auto'),
   padding('pb-10', 'pt-8', 'px-7', 'sm:px-28'),
   maxWidth('max-w-7xl'),
-  minHeight('min-h-screen')
+  minHeight('min-h-screen'),
+  display('lg:flex'),
+  flexDirection('lg:flex-col'),
+  justifyContent('lg:justify-center')
 )
 export default function ({ children }: ChildrenProp) {
   return <div className={root}>{children}</div>

@@ -6,6 +6,7 @@ import classnames, {
   backgroundImage,
   display,
   flexDirection,
+  flexGrow,
   fontFamily,
   fontSize,
   fontWeight,
@@ -47,7 +48,7 @@ const buttonContainer = classnames(
   display('flex'),
   justifyContent('justify-center'),
   alignItems('items-center'),
-  padding('py-8', 'lg:px-40'),
+  padding('py-8'),
   backgroundColor('bg-black'),
   textColor('text-white', 'hover:text-transparent'),
   backgroundImage('hover:bg-gradient-to-r'),
@@ -55,7 +56,8 @@ const buttonContainer = classnames(
   backgroundClip('hover:bg-clip-text'),
   fontFamily('font-sans'),
   fontWeight('font-normal'),
-  fontSize('text-base')
+  fontSize('text-base'),
+  flexGrow('grow')
 )
 const badge = classnames(
   height('h-6'),
