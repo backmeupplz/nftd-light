@@ -1,16 +1,17 @@
-import AllLink from 'models/AllLink'
+import Content from 'models/Content'
 import EnsData from 'models/EnsData'
 import PrimarySocial from 'models/PrimarySocial'
-import VerifiedLink from 'models/VerifiedLink'
 
 export default interface UserProfile {
+  tokenId: string
   slug: string
   isOG: boolean
-  displayName: string
   avatar: string
+  displayName: string
   bio: string
-  ensData?: EnsData[]
+  content: Content[]
   primary_social: PrimarySocial[]
-  verified_links: VerifiedLink[]
-  all_links: AllLink[]
+  ensData: EnsData[]
+  fid: number
+  verified_links: Content[]
 }

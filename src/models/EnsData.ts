@@ -1,6 +1,6 @@
 export default interface EnsData {
   sig: null
-  name?: string
+  name: string
   type: string
   proof: string
   verified: boolean

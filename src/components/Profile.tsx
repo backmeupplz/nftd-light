@@ -86,7 +86,7 @@ function ProfileSuspended() {
         <BodyText>{user.bio}</BodyText>
       </div>
       <div className={buttonsCol}>
-        {user.all_links.map((link, i) => (
+        {user.content.map((link, i) => (
           <Button
             key={i}
             title={link.label}

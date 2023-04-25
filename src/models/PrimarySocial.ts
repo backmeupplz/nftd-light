@@ -1,7 +1,7 @@
 export default interface PrimarySocial {
   type: string
   subtype: string
-  username?: string
+  username: string
   fid: number
   last_modified: null
   first_added: number
